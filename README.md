@@ -168,11 +168,8 @@ http://127.0.0.1:5000
 
 ## Security
 
-Do not upload your `.env` file to GitHub.
+The repository include `.env.example`, but not `.env`.
 
-The repository should include `.env.example`, but not `.env`.
-
-Recommended `.gitignore`:
 
 ```text
 .env
@@ -210,3 +207,10 @@ Before making a real offer, an investor should verify:
 - User authentication
 - Property photo analysis
 - Deal pipeline dashboard
+- HMLs list
+- LCs list
+- Roofing pictures with measures and estimates
+
+
+##If you've made it this far, thank you.
+
