@@ -1,6 +1,6 @@
 # Property Investment Scanner
 
-**Stanford Python Final Project**
+**Stanford Python Final Project Henry Trivino**
 
 Property Investment Scanner is a Python/Flask web application designed to analyze fixer-upper and value-add real estate opportunities for fix-and-flip investments.
 
