@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Santa Clara County Property Scanner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="hero">
+            <div>
+                <p class="eyebrow">Santa Clara County → Bay Area → California • Fixer Upper Priority</p>
+                <h1>Property Investment Scanner</h1>
+                <p class="subtitle">
+                    Scan Santa Clara County first. If no yellow or green opportunities are found, the app expands to the full Bay Area, then all California.
+                    Results are temporary. Save only the properties you want to review later.
+                </p>
+            </div>
+
+            <div class="scan-box">
+                <label>Search Area</label>
+                <input value="Santa Clara County, CA" disabled>
+
+                <label>Maximum Price</label>
+                <input id="maxPrice" value="1500000">
+
+                <button id="scanButton" onclick="scanProperties()">Scan Properties</button>
+                <button class="secondary" onclick="loadSavedProperties()">View Saved Properties</button>
+                <button class="secondary" onclick="showPrompt()">Show Prompt</button>
+                <a class="download-link" href="/download-saved">Download TXT File</a>
+                <p id="statusText" class="status">Ready to scan Santa Clara County, Bay Area, then California if needed.</p>
+            </div>
+        </section>
+
+        <section class="summary">
+            <div>
+                <span id="totalProperties">0</span>
+                <p>Current Scan Properties</p>
+            </div>
+            <div>
+                <span id="bestScore">-</span>
+                <p>Best Score</p>
+            </div>
+            <div>
+                <span id="savedCount">0</span>
+                <p>Saved This Session</p>
+            </div>
+        </section>
+
+        <section class="section-title">
+            <h2>Current Scan Results</h2>
+            <p>These cards disappear when you run a new scan or close the page unless you save them.</p>
+        </section>
+
+        <section id="propertyGrid" class="property-grid"></section>
+
+        <section class="saved-panel">
+            <div class="section-title">
+                <h2>Saved Properties TXT Preview</h2>
+                <p>Saved properties are written to <strong>saved_properties.txt</strong>.</p>
+            </div>
+            <pre id="savedPreview">No saved properties loaded yet.</pre>
+
+            <div class="section-title">
+                <h2>Prompt Sent to OpenAI</h2>
+                <p>This helps verify whether the app is running a real search or demo mode.</p>
+            </div>
+            <pre id="promptPreview">Click Show Prompt to inspect the exact query.</pre>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
